@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -11,6 +5,8 @@ import {
   Text,
   View
 } from 'react-native';
+
+import ReactotronConfig from './config/ReactotronConfig';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
