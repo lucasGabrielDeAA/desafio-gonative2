@@ -127,3 +127,42 @@ Then, create a file named ".eslintrc" in the root's project, and paste the conte
 }
 ```
 At the end of this proccess, we need to install the eslint plugin in ours Editor, then close the editor and re-open to see the eslint working
+
+
+## Installing the [Babel Module Resolver](https://github.com/tleunen/babel-plugin-module-resolver)
+
+To install the plugin, run the following command
+
+```
+yarn add babel-plugin-module-resolver eslint-import-resolver-babel-module --dev
+```
+
+After the installation, open the ".babelrc" file in the root's project and paste the following content
+
+```
+{
+  "presets": ["react-native"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "cwd": "babelrc",
+        "root": ["./src"],
+        "extensions": [".js", ".ios.js", ".android.js"]
+      }
+    ]
+  ]
+}
+```
+
+And in the ".eslintrc" file add the following content before "globals"
+
+```
+...
+"settings": {
+  "import/resolver": {
+    "babel-module": {}
+  }
+},
+..."globals"
+```
