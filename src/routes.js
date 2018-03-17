@@ -1,9 +1,9 @@
-import { TabNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 
 import Issues from 'pages/issues';
 import Repositories from 'pages/repositories';
 
-const Routes = TabNavigator({
+const Routes = StackNavigator({
   Repositories: {
     screen: Repositories,
   },
