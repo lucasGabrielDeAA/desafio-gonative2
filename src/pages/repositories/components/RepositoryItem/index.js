@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import styles from './styles';
 
-export default class RespositoryItem extends Component {
+class RespositoryItem extends Component {
   static propTypes = {
     repository: PropTypes.shape({
       id: PropTypes.number,
@@ -39,3 +39,5 @@ export default class RespositoryItem extends Component {
     );
   }
 }
+
+export default RespositoryItem;

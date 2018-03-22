@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     flexGrow: 1,
     paddingHorizontal: metrics.basePadding,
+    flex: 1,
   },
   name: {
     fontSize: 16,
